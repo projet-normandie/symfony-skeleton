@@ -16,6 +16,10 @@
         "nelmio/cors-bundle": "^2.5",
         "phpdocumentor/reflection-docblock": "^5.6",
         "phpstan/phpdoc-parser": "^2.1",
+        "sonata-project/admin-bundle": "^4.36",
+        "sonata-project/doctrine-orm-admin-bundle": "^4.18",
+        "sonata-project/translation-bundle": "4.x-dev",
+        "sonata-project/user-bundle": "^5.14",
         "symfony/asset": "7.2.*",
         "symfony/console": "7.2.*",
         "symfony/dotenv": "7.2.*",
@@ -70,6 +74,26 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "console": "@php bin/console",
+        "make:db": [
+            "@console doctrine:database:create --if-not-exists",
+            "@console doctrine:schema:drop --force --full-database",
+            "@console doctrine:schema:create",
+            "@console doctrine:fixtures:load -n"
+        ],
+        "make:db:test": [
+            "@console doctrine:database:create --if-not-exists --env=test",
+            "@console doctrine:schema:drop --force --full-database --env=test",
+            "@console doctrine:schema:create --env=test",
+            "@console d:fixtures:load --env=test -n"
+        ],
+        "lint:phpstan": "@php vendor/bin/phpstan",
+        "lint:phpcs": "@php vendor/bin/phpcs src/ tests/ -p",
+        "lint:phpcs:fix": "@php vendor/bin/phpcbf src/ tests/ -p",
+        "lint": [
+            "@lint:phpcs",
+            "@lint:phpstan"
         ]
     },
     "conflict": {
