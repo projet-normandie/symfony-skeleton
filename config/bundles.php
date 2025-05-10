@@ -24,4 +24,7 @@ return [
     League\FlysystemBundle\FlysystemBundle::class => ['all' => true],
     Gesdinet\JWTRefreshTokenBundle\GesdinetJWTRefreshTokenBundle::class => ['all' => true],
     ProjetNormandie\UserBundle\ProjetNormandieUserBundle::class => ['all' => true],
+    A2lix\AutoFormBundle\A2lixAutoFormBundle::class => ['all' => true],
+    A2lix\TranslationFormBundle\A2lixTranslationFormBundle::class => ['all' => true],
+    ProjetNormandie\ArticleBundle\ProjetNormandieArticleBundle::class => ['all' => true],
 ];
