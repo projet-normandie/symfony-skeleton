@@ -19,19 +19,17 @@ steps:
       - quality
 
   - name: deploy-staging
-    image: ubuntu:24.04
+    image: alpine:3
     commands:
-      - apt-get update
-      - apt-get install -y openssh-client rsync libssl-dev
+      - apk update && apk upgrade
+      - apk add openssh bash rsync
       - mkdir -p ~/.ssh
       - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_ed25519
       - printf "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile=/dev/null\n" > ~/.ssh/config
       - chmod 600 ~/.ssh/id_ed25519
       - eval $(ssh-agent -s)
       - ssh-add ~/.ssh/id_ed25519
-      # Déploiement des fichiers
       - rsync -rav --quiet --delete -e "ssh -p $STAGING_SSH_PORT" --exclude='.env.local' --exclude='var/cache' --exclude='var/log' ./ $STAGING_SSH_USER@$STAGING_SSH_HOST:$STAGING_PATH/
-      # Commandes post-déploiement
       - ssh -p $STAGING_SSH_PORT $STAGING_SSH_USER@$STAGING_SSH_HOST "cd $STAGING_PATH && bin/console cache:clear --env=prod"
     environment:
       SSH_PRIVATE_KEY:
