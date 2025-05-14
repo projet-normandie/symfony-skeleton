@@ -3,3 +3,7 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+projet_normandie_user:
+    resource: "@ProjetNormandieUserBundle/Controller/"
+    type: attribute
