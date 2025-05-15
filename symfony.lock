@@ -327,6 +327,18 @@
             "config/packages/mailer.yaml"
         ]
     },
+    "symfony/messenger": {
+        "version": "7.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "6.0",
+            "ref": "ba1ac4e919baba5644d31b57a3284d6ba12d52ee"
+        },
+        "files": [
+            "config/packages/messenger.yaml"
+        ]
+    },
     "symfony/monolog-bundle": {
         "version": "3.10",
         "recipe": {
@@ -429,5 +441,19 @@
     },
     "twig/extra-bundle": {
         "version": "v3.21.0"
+    },
+    "zenstruck/messenger-monitor-bundle": {
+        "version": "0.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "0.5",
+            "ref": "e830a96e19aef36b23c63a4f8884fe51815f06d8"
+        },
+        "files": [
+            "config/packages/zenstruck_messenger_monitor.yaml",
+            "src/Controller/Admin/MessengerMonitorController.php",
+            "src/Entity/ProcessedMessage.php"
+        ]
     }
 }
