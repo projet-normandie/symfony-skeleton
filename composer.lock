@@ -174,21 +174,21 @@
         },
         {
             "name": "api-platform/doctrine-common",
-            "version": "v4.1.8",
+            "version": "v4.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/api-platform/doctrine-common.git",
-                "reference": "c1a131816aadc6298e068e94d0305070808c16cd"
+                "reference": "7eb521a58ce54fc1fec4de9a7c8539182b8946b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/api-platform/doctrine-common/zipball/c1a131816aadc6298e068e94d0305070808c16cd",
-                "reference": "c1a131816aadc6298e068e94d0305070808c16cd",
+                "url": "https://api.github.com/repos/api-platform/doctrine-common/zipball/7eb521a58ce54fc1fec4de9a7c8539182b8946b5",
+                "reference": "7eb521a58ce54fc1fec4de9a7c8539182b8946b5",
                 "shasum": ""
             },
             "require": {
                 "api-platform/metadata": "^4.1",
-                "api-platform/state": "^4.1",
+                "api-platform/state": "^4.1.8",
                 "doctrine/collections": "^2.1",
                 "doctrine/common": "^3.2.2",
                 "doctrine/persistence": "^3.2",
@@ -255,28 +255,28 @@
                 "rest"
             ],
             "support": {
-                "source": "https://github.com/api-platform/doctrine-common/tree/v4.1.8"
+                "source": "https://github.com/api-platform/doctrine-common/tree/v4.1.9"
             },
-            "time": "2025-04-18T08:39:51+00:00"
+            "time": "2025-05-14T04:54:42+00:00"
         },
         {
             "name": "api-platform/doctrine-orm",
-            "version": "v4.1.8",
+            "version": "v4.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/api-platform/doctrine-orm.git",
-                "reference": "2f64d82c068e545539649995538593a70656d7c4"
+                "reference": "6380a9518e64eb495fb5e8972902fb78e3be752e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/api-platform/doctrine-orm/zipball/2f64d82c068e545539649995538593a70656d7c4",
-                "reference": "2f64d82c068e545539649995538593a70656d7c4",
+                "url": "https://api.github.com/repos/api-platform/doctrine-orm/zipball/6380a9518e64eb495fb5e8972902fb78e3be752e",
+                "reference": "6380a9518e64eb495fb5e8972902fb78e3be752e",
                 "shasum": ""
             },
             "require": {
                 "api-platform/doctrine-common": "^4.1",
                 "api-platform/metadata": "^4.1",
-                "api-platform/state": "^4.1",
+                "api-platform/state": "^4.1.8",
                 "doctrine/orm": "^2.17 || ^3.0",
                 "php": ">=8.2",
                 "symfony/property-info": "^6.4 || ^7.1"
@@ -339,13 +339,13 @@
                 "rest"
             ],
             "support": {
-                "source": "https://github.com/api-platform/doctrine-orm/tree/v4.1.8"
+                "source": "https://github.com/api-platform/doctrine-orm/tree/v4.1.9"
             },
-            "time": "2025-05-07T10:11:37+00:00"
+            "time": "2025-05-14T04:54:42+00:00"
         },
         {
             "name": "api-platform/documentation",
-            "version": "v4.1.8",
+            "version": "v4.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/api-platform/documentation.git",
@@ -400,13 +400,13 @@
             ],
             "description": "API Platform documentation controller.",
             "support": {
-                "source": "https://github.com/api-platform/documentation/tree/v4.1.8"
+                "source": "https://github.com/api-platform/documentation/tree/v4.1.9"
             },
             "time": "2025-04-18T08:39:51+00:00"
         },
         {
             "name": "api-platform/http-cache",
-            "version": "v4.1.8",
+            "version": "v4.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/api-platform/http-cache.git",
@@ -477,13 +477,13 @@
                 "rest"
             ],
             "support": {
-                "source": "https://github.com/api-platform/http-cache/tree/v4.1.8"
+                "source": "https://github.com/api-platform/http-cache/tree/v4.1.9"
             },
             "time": "2025-04-18T08:39:51+00:00"
         },
         {
             "name": "api-platform/hydra",
-            "version": "v4.1.8",
+            "version": "v4.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/api-platform/hydra.git",
@@ -561,13 +561,13 @@
                 "rest"
             ],
             "support": {
-                "source": "https://github.com/api-platform/hydra/tree/v4.1.8"
+                "source": "https://github.com/api-platform/hydra/tree/v4.1.9"
             },
             "time": "2025-04-29T07:49:14+00:00"
         },
         {
             "name": "api-platform/json-schema",
-            "version": "v4.1.8",
+            "version": "v4.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/api-platform/json-schema.git",
@@ -639,13 +639,13 @@
                 "swagger"
             ],
             "support": {
-                "source": "https://github.com/api-platform/json-schema/tree/v4.1.8"
+                "source": "https://github.com/api-platform/json-schema/tree/v4.1.9"
             },
             "time": "2025-05-06T08:38:55+00:00"
         },
         {
             "name": "api-platform/jsonld",
-            "version": "v4.1.8",
+            "version": "v4.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/api-platform/jsonld.git",
@@ -716,22 +716,22 @@
                 "rest"
             ],
             "support": {
-                "source": "https://github.com/api-platform/jsonld/tree/v4.1.8"
+                "source": "https://github.com/api-platform/jsonld/tree/v4.1.9"
             },
             "time": "2025-04-18T08:39:51+00:00"
         },
         {
             "name": "api-platform/metadata",
-            "version": "v4.1.8",
+            "version": "v4.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/api-platform/metadata.git",
-                "reference": "76a7fd811d147cf60c09d17a046cfd2d85e09cd0"
+                "reference": "6b0ae3106dcafcc2f427e7ae7984fd07a1f018cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/api-platform/metadata/zipball/76a7fd811d147cf60c09d17a046cfd2d85e09cd0",
-                "reference": "76a7fd811d147cf60c09d17a046cfd2d85e09cd0",
+                "url": "https://api.github.com/repos/api-platform/metadata/zipball/6b0ae3106dcafcc2f427e7ae7984fd07a1f018cf",
+                "reference": "6b0ae3106dcafcc2f427e7ae7984fd07a1f018cf",
                 "shasum": ""
             },
             "require": {
@@ -741,7 +741,7 @@
                 "psr/log": "^1.0 || ^2.0 || ^3.0",
                 "symfony/property-info": "^6.4 || ^7.1",
                 "symfony/string": "^6.4 || ^7.0",
-                "symfony/type-info": "^7.1"
+                "symfony/type-info": "^7.2"
             },
             "require-dev": {
                 "api-platform/json-schema": "^4.1",
@@ -812,13 +812,13 @@
                 "swagger"
             ],
             "support": {
-                "source": "https://github.com/api-platform/metadata/tree/v4.1.8"
+                "source": "https://github.com/api-platform/metadata/tree/v4.1.9"
             },
-            "time": "2025-05-09T05:54:53+00:00"
+            "time": "2025-05-16T07:56:36+00:00"
         },
         {
             "name": "api-platform/openapi",
-            "version": "v4.1.8",
+            "version": "v4.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/api-platform/openapi.git",
@@ -898,13 +898,13 @@
                 "swagger"
             ],
             "support": {
-                "source": "https://github.com/api-platform/openapi/tree/v4.1.8"
+                "source": "https://github.com/api-platform/openapi/tree/v4.1.9"
             },
             "time": "2025-05-06T08:38:55+00:00"
         },
         {
             "name": "api-platform/serializer",
-            "version": "v4.1.8",
+            "version": "v4.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/api-platform/serializer.git",
@@ -988,22 +988,22 @@
                 "serializer"
             ],
             "support": {
-                "source": "https://github.com/api-platform/serializer/tree/v4.1.8"
+                "source": "https://github.com/api-platform/serializer/tree/v4.1.9"
             },
             "time": "2025-05-05T13:12:58+00:00"
         },
         {
             "name": "api-platform/state",
-            "version": "v4.1.8",
+            "version": "v4.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/api-platform/state.git",
-                "reference": "851ac107fd9ab5a0e4c069d4f1bc39cb79b22def"
+                "reference": "0c47360a3b6885fe02055ebeb767d3a27d3381db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/api-platform/state/zipball/851ac107fd9ab5a0e4c069d4f1bc39cb79b22def",
-                "reference": "851ac107fd9ab5a0e4c069d4f1bc39cb79b22def",
+                "url": "https://api.github.com/repos/api-platform/state/zipball/0c47360a3b6885fe02055ebeb767d3a27d3381db",
+                "reference": "0c47360a3b6885fe02055ebeb767d3a27d3381db",
                 "shasum": ""
             },
             "require": {
@@ -1078,22 +1078,22 @@
                 "swagger"
             ],
             "support": {
-                "source": "https://github.com/api-platform/state/tree/v4.1.8"
+                "source": "https://github.com/api-platform/state/tree/v4.1.9"
             },
-            "time": "2025-05-07T10:11:37+00:00"
+            "time": "2025-05-16T07:56:36+00:00"
         },
         {
             "name": "api-platform/symfony",
-            "version": "v4.1.8",
+            "version": "v4.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/api-platform/symfony.git",
-                "reference": "29e936ccf294bec83880a87ee76237047800c791"
+                "reference": "e75993a20acd8d15f109ed1f08b221789844e305"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/api-platform/symfony/zipball/29e936ccf294bec83880a87ee76237047800c791",
-                "reference": "29e936ccf294bec83880a87ee76237047800c791",
+                "url": "https://api.github.com/repos/api-platform/symfony/zipball/e75993a20acd8d15f109ed1f08b221789844e305",
+                "reference": "e75993a20acd8d15f109ed1f08b221789844e305",
                 "shasum": ""
             },
             "require": {
@@ -1201,27 +1201,28 @@
                 "symfony"
             ],
             "support": {
-                "source": "https://github.com/api-platform/symfony/tree/v4.1.8"
+                "source": "https://github.com/api-platform/symfony/tree/v4.1.9"
             },
-            "time": "2025-05-06T08:38:55+00:00"
+            "time": "2025-05-16T07:56:44+00:00"
         },
         {
             "name": "api-platform/validator",
-            "version": "v4.1.8",
+            "version": "v4.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/api-platform/validator.git",
-                "reference": "80f95b0d5e18d5d483dccf3a796cba6c8edef541"
+                "reference": "c30e6c511d5ce028ad670079282438d7ed917993"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/api-platform/validator/zipball/80f95b0d5e18d5d483dccf3a796cba6c8edef541",
-                "reference": "80f95b0d5e18d5d483dccf3a796cba6c8edef541",
+                "url": "https://api.github.com/repos/api-platform/validator/zipball/c30e6c511d5ce028ad670079282438d7ed917993",
+                "reference": "c30e6c511d5ce028ad670079282438d7ed917993",
                 "shasum": ""
             },
             "require": {
                 "api-platform/metadata": "^4.1",
                 "php": ">=8.2",
+                "symfony/type-info": "^7.2",
                 "symfony/web-link": "^6.4 || ^7.1"
             },
             "require-dev": {
@@ -1274,9 +1275,9 @@
                 "validator"
             ],
             "support": {
-                "source": "https://github.com/api-platform/validator/tree/v4.1.8"
+                "source": "https://github.com/api-platform/validator/tree/v4.1.9"
             },
-            "time": "2025-04-18T08:39:51+00:00"
+            "time": "2025-05-16T07:56:36+00:00"
         },
         {
             "name": "behat/transliterator",
@@ -4243,12 +4244,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/projet-normandie/user-bundle.git",
-                "reference": "a0480c69e6333f168a431aca8279df0e4e945ede"
+                "reference": "adb0189772bcb489450bca115e66a5da31b07b2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/projet-normandie/user-bundle/zipball/a0480c69e6333f168a431aca8279df0e4e945ede",
-                "reference": "a0480c69e6333f168a431aca8279df0e4e945ede",
+                "url": "https://api.github.com/repos/projet-normandie/user-bundle/zipball/adb0189772bcb489450bca115e66a5da31b07b2d",
+                "reference": "adb0189772bcb489450bca115e66a5da31b07b2d",
                 "shasum": ""
             },
             "require": {
@@ -4313,7 +4314,7 @@
                 "issues": "https://github.com/projet-normandie/user-bundle/issues",
                 "source": "https://github.com/projet-normandie/user-bundle/tree/main"
             },
-            "time": "2025-05-14T19:41:25+00:00"
+            "time": "2025-05-17T17:12:19+00:00"
         },
         {
             "name": "psr/cache",
@@ -4623,22 +4624,21 @@
         },
         {
             "name": "sonata-project/admin-bundle",
-            "version": "4.36.1",
+            "version": "4.36.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "7f94789311bc7931030fbf84cda6ca7a3b18ed03"
+                "reference": "e77b600a4ff85d46e71214995dabf96a744cbaa7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/7f94789311bc7931030fbf84cda6ca7a3b18ed03",
-                "reference": "7f94789311bc7931030fbf84cda6ca7a3b18ed03",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/e77b600a4ff85d46e71214995dabf96a744cbaa7",
+                "reference": "e77b600a4ff85d46e71214995dabf96a744cbaa7",
                 "shasum": ""
             },
             "require": {
                 "doctrine/collections": "^1.6 || ^2.0",
                 "doctrine/common": "^3.0",
-                "ext-json": "*",
                 "knplabs/knp-menu": "^3.6",
                 "knplabs/knp-menu-bundle": "^3.0",
                 "php": "^8.1",
@@ -4686,22 +4686,22 @@
                 "matthiasnoback/symfony-dependency-injection-test": "^4.2 || ^5.0",
                 "phpstan/extension-installer": "^1.0",
                 "phpstan/phpdoc-parser": "^1.0",
-                "phpstan/phpstan": "^1.0",
-                "phpstan/phpstan-phpunit": "^1.0",
-                "phpstan/phpstan-strict-rules": "^1.0",
-                "phpstan/phpstan-symfony": "^1.0",
+                "phpstan/phpstan": "^1.0 || ^2.0",
+                "phpstan/phpstan-phpunit": "^1.0 || ^2.0",
+                "phpstan/phpstan-strict-rules": "^1.0 || ^2.0",
+                "phpstan/phpstan-symfony": "^1.0 || ^2.0",
                 "phpunit/phpunit": "^9.6",
-                "psalm/plugin-phpunit": "^0.18",
+                "psalm/plugin-phpunit": "^0.18 || ^0.19",
                 "psalm/plugin-symfony": "^5.0",
                 "psr/event-dispatcher": "^1.0",
-                "rector/rector": "^1.1",
+                "rector/rector": "^1.1 || ^2.0",
                 "symfony/browser-kit": "^6.4 || ^7.1",
                 "symfony/css-selector": "^6.4 || ^7.1",
                 "symfony/filesystem": "^6.4 || ^7.1",
                 "symfony/maker-bundle": "^1.25",
                 "symfony/phpunit-bridge": "^6.4 || ^7.1",
                 "symfony/yaml": "^6.4 || ^7.1",
-                "vimeo/psalm": "^5.8.0"
+                "vimeo/psalm": "^5.8.0 || ^6.10.0"
             },
             "suggest": {
                 "twig/extra-bundle": "Auto configures the Twig Intl extension"
@@ -4739,7 +4739,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sonata-project/SonataAdminBundle/issues",
-                "source": "https://github.com/sonata-project/SonataAdminBundle/tree/4.36.1"
+                "source": "https://github.com/sonata-project/SonataAdminBundle/tree/4.36.2"
             },
             "funding": [
                 {
@@ -4759,20 +4759,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-04-03T18:45:18+00:00"
+            "time": "2025-05-16T20:10:49+00:00"
         },
         {
             "name": "sonata-project/block-bundle",
-            "version": "5.1.2",
+            "version": "5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataBlockBundle.git",
-                "reference": "0c5f67e1657d734bd20657d4886531b1e43e6529"
+                "reference": "3995e9a48e7f7e25d2a6a302be5cda895730250c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/0c5f67e1657d734bd20657d4886531b1e43e6529",
-                "reference": "0c5f67e1657d734bd20657d4886531b1e43e6529",
+                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/3995e9a48e7f7e25d2a6a302be5cda895730250c",
+                "reference": "3995e9a48e7f7e25d2a6a302be5cda895730250c",
                 "shasum": ""
             },
             "require": {
@@ -4807,19 +4807,19 @@
                 "matthiasnoback/symfony-config-test": "^4.2 || ^5.0",
                 "matthiasnoback/symfony-dependency-injection-test": "^4.1 || ^5.0",
                 "phpstan/extension-installer": "^1.0",
-                "phpstan/phpstan": "^1.0",
-                "phpstan/phpstan-phpunit": "^1.0",
-                "phpstan/phpstan-strict-rules": "^1.0",
-                "phpstan/phpstan-symfony": "^1.0",
+                "phpstan/phpstan": "^1.0 || ^2.0",
+                "phpstan/phpstan-phpunit": "^1.0 || ^2.0",
+                "phpstan/phpstan-strict-rules": "^1.0 || ^2.0",
+                "phpstan/phpstan-symfony": "^1.0 || ^2.0",
                 "phpunit/phpunit": "^9.5.13",
-                "psalm/plugin-phpunit": "^0.18",
+                "psalm/plugin-phpunit": "^0.18 || ^0.19",
                 "psalm/plugin-symfony": "^5.0",
-                "rector/rector": "^1.1",
+                "rector/rector": "^1.1 || ^2.0",
                 "symfony/browser-kit": "^6.4 || ^7.1",
                 "symfony/error-handler": "^6.4 || ^7.1",
                 "symfony/phpunit-bridge": "^6.4 || ^7.1",
                 "symfony/stopwatch": "^6.4 || ^7.1",
-                "vimeo/psalm": "^5.8"
+                "vimeo/psalm": "^5.8 || ^6.10"
             },
             "suggest": {
                 "knplabs/knp-menu-bundle": "Required to use the menu block"
@@ -4853,7 +4853,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sonata-project/SonataBlockBundle/issues",
-                "source": "https://github.com/sonata-project/SonataBlockBundle/tree/5.1.2"
+                "source": "https://github.com/sonata-project/SonataBlockBundle/tree/5.2.0"
             },
             "funding": [
                 {
@@ -4873,7 +4873,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-05T19:14:35+00:00"
+            "time": "2025-05-16T20:11:22+00:00"
         },
         {
             "name": "sonata-project/doctrine-extensions",
@@ -5225,16 +5225,16 @@
         },
         {
             "name": "sonata-project/form-extensions",
-            "version": "2.4.1",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/form-extensions.git",
-                "reference": "979e362b5a33833bd491f613fe019514aefa07cf"
+                "reference": "9964f1c4c0a8d7da4d432e0bad8502dfa2087495"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/form-extensions/zipball/979e362b5a33833bd491f613fe019514aefa07cf",
-                "reference": "979e362b5a33833bd491f613fe019514aefa07cf",
+                "url": "https://api.github.com/repos/sonata-project/form-extensions/zipball/9964f1c4c0a8d7da4d432e0bad8502dfa2087495",
+                "reference": "9964f1c4c0a8d7da4d432e0bad8502dfa2087495",
                 "shasum": ""
             },
             "require": {
@@ -5255,14 +5255,14 @@
                 "matthiasnoback/symfony-dependency-injection-test": "^4.0 || ^5.0",
                 "phpstan/extension-installer": "^1.0",
                 "phpstan/phpdoc-parser": "^1.0",
-                "phpstan/phpstan": "^1.0",
-                "phpstan/phpstan-phpunit": "^1.0",
-                "phpstan/phpstan-strict-rules": "^1.0",
-                "phpstan/phpstan-symfony": "^1.0",
+                "phpstan/phpstan": "^1.0 || ^2.0",
+                "phpstan/phpstan-phpunit": "^1.0 || ^2.0",
+                "phpstan/phpstan-strict-rules": "^1.0 || ^2.0",
+                "phpstan/phpstan-symfony": "^1.0 || ^2.0",
                 "phpunit/phpunit": "^9.5",
-                "psalm/plugin-phpunit": "^0.18",
+                "psalm/plugin-phpunit": "^0.18 || ^0.19",
                 "psalm/plugin-symfony": "^5.0",
-                "rector/rector": "^1.1",
+                "rector/rector": "^1.1 || ^2.0",
                 "symfony/config": "^6.4 || ^7.1",
                 "symfony/dependency-injection": "^6.4 || ^7.1",
                 "symfony/framework-bundle": "^6.4 || ^7.1",
@@ -5271,7 +5271,7 @@
                 "symfony/phpunit-bridge": "^6.4 || ^7.1",
                 "symfony/twig-bridge": "^6.4.3 || ^7.1",
                 "symfony/twig-bundle": "^6.4 || ^7.1",
-                "vimeo/psalm": "^5.8"
+                "vimeo/psalm": "^5.8 || ^6.10"
             },
             "type": "symfony-bundle",
             "autoload": {
@@ -5302,7 +5302,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sonata-project/form-extensions/issues",
-                "source": "https://github.com/sonata-project/form-extensions/tree/2.4.1"
+                "source": "https://github.com/sonata-project/form-extensions/tree/2.5.0"
             },
             "funding": [
                 {
@@ -5322,7 +5322,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-05T19:08:03+00:00"
+            "time": "2025-05-16T19:49:39+00:00"
         },
         {
             "name": "sonata-project/translation-bundle",
@@ -5330,12 +5330,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataTranslationBundle.git",
-                "reference": "5334a1d5700c973c3150283079d8ad28f1fcbd51"
+                "reference": "ff6668a11265bc37afb1773d33cd4e0b3b30f0b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataTranslationBundle/zipball/5334a1d5700c973c3150283079d8ad28f1fcbd51",
-                "reference": "5334a1d5700c973c3150283079d8ad28f1fcbd51",
+                "url": "https://api.github.com/repos/sonata-project/SonataTranslationBundle/zipball/ff6668a11265bc37afb1773d33cd4e0b3b30f0b6",
+                "reference": "ff6668a11265bc37afb1773d33cd4e0b3b30f0b6",
                 "shasum": ""
             },
             "require": {
@@ -5440,7 +5440,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-09T02:34:18+00:00"
+            "time": "2025-05-17T02:33:20+00:00"
         },
         {
             "name": "sonata-project/twig-extensions",
@@ -5540,42 +5540,42 @@
         },
         {
             "name": "sonata-project/user-bundle",
-            "version": "5.14.0",
+            "version": "5.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataUserBundle.git",
-                "reference": "724564aa81194ef8ef81fecbafd81d0c1417b639"
+                "reference": "f0c2fa783d6823db75dac14f3a64c38147012fef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/724564aa81194ef8ef81fecbafd81d0c1417b639",
-                "reference": "724564aa81194ef8ef81fecbafd81d0c1417b639",
+                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/f0c2fa783d6823db75dac14f3a64c38147012fef",
+                "reference": "f0c2fa783d6823db75dac14f3a64c38147012fef",
                 "shasum": ""
             },
             "require": {
                 "doctrine/collections": "^1.6 || ^2.0",
                 "doctrine/common": "^3.1",
                 "doctrine/persistence": "^3.0.2",
-                "php": "^8.0",
+                "php": "^8.1",
                 "sonata-project/doctrine-extensions": "^1.13 || ^2.0",
                 "sonata-project/form-extensions": "^1.4 || ^2.0",
                 "sonata-project/twig-extensions": "^1.3 || ^2.0",
-                "symfony/config": "^5.4 || ^6.2 || ^7.0",
-                "symfony/console": "^5.4 || ^6.2 || ^7.0",
-                "symfony/dependency-injection": "^5.4 || ^6.2 || ^7.0",
-                "symfony/event-dispatcher": "^5.4 || ^6.2 || ^7.0",
-                "symfony/form": "^5.4 || ^6.2 || ^7.0",
-                "symfony/framework-bundle": "^5.4 || ^6.2 || ^7.0",
-                "symfony/http-foundation": "^5.4 || ^6.2 || ^7.0",
-                "symfony/http-kernel": "^5.4 || ^6.2 || ^7.0",
-                "symfony/options-resolver": "^5.4 || ^6.2 || ^7.0",
-                "symfony/routing": "^5.4 || ^6.2 || ^7.0",
+                "symfony/config": "^6.4 || ^7.1",
+                "symfony/console": "^6.4 || ^7.1",
+                "symfony/dependency-injection": "^6.4 || ^7.1",
+                "symfony/event-dispatcher": "^6.4 || ^7.1",
+                "symfony/form": "^6.4 || ^7.1",
+                "symfony/framework-bundle": "^6.4 || ^7.1",
+                "symfony/http-foundation": "^6.4 || ^7.1",
+                "symfony/http-kernel": "^6.4 || ^7.1",
+                "symfony/options-resolver": "^6.4 || ^7.1",
+                "symfony/routing": "^6.4 || ^7.1",
                 "symfony/security-acl": "^3.0",
-                "symfony/security-core": "^5.4 || ^6.2 || ^7.0",
-                "symfony/security-csrf": "^5.4 || ^6.2 || ^7.0",
-                "symfony/translation": "^5.4 || ^6.2 || ^7.0",
+                "symfony/security-core": "^6.4 || ^7.1",
+                "symfony/security-csrf": "^6.4 || ^7.1",
+                "symfony/translation": "^6.4 || ^7.1",
                 "symfony/translation-contracts": "^2.5 || ^3.0",
-                "symfony/validator": "^5.4 || ^6.2 || ^7.0",
+                "symfony/validator": "^6.4 || ^7.1",
                 "twig/twig": "^3.0"
             },
             "conflict": {
@@ -5593,25 +5593,26 @@
                 "matthiasnoback/symfony-config-test": "^4.2 || ^5.0",
                 "matthiasnoback/symfony-dependency-injection-test": "^4.0 || ^5.0",
                 "phpstan/extension-installer": "^1.0",
-                "phpstan/phpstan": "^1.0",
-                "phpstan/phpstan-phpunit": "^1.0",
-                "phpstan/phpstan-strict-rules": "^1.0",
-                "phpstan/phpstan-symfony": "^1.0",
+                "phpstan/phpdoc-parser": "^1.0",
+                "phpstan/phpstan": "^1.0 || ^2.0",
+                "phpstan/phpstan-phpunit": "^1.0 || ^2.0",
+                "phpstan/phpstan-strict-rules": "^1.0 || ^2.0",
+                "phpstan/phpstan-symfony": "^1.0 || ^2.0",
                 "phpunit/phpunit": "^9.5",
-                "psalm/plugin-phpunit": "^0.18",
+                "psalm/plugin-phpunit": "^0.18 || ^0.19",
                 "psalm/plugin-symfony": "^5.0",
-                "rector/rector": "^1.1",
-                "sonata-project/admin-bundle": "^4.20",
+                "rector/rector": "^1.1 || ^2.0",
+                "sonata-project/admin-bundle": "^4.35.4",
                 "sonata-project/block-bundle": "^4.11 || ^5.0",
                 "sonata-project/doctrine-orm-admin-bundle": "^4.0",
-                "symfony/browser-kit": "^5.4 || ^6.2 || ^7.0",
-                "symfony/console": "^5.4 || ^6.2 || ^7.0",
-                "symfony/filesystem": "^5.4 || ^6.2 || ^7.0",
-                "symfony/intl": "^5.4 || ^6.2 || ^7.0",
-                "symfony/mailer": "^5.4 || ^6.2 || ^7.0",
-                "symfony/mime": "^5.4 || ^6.2 || ^7.0",
-                "symfony/phpunit-bridge": "^6.2 || ^7.0",
-                "vimeo/psalm": "^5.0"
+                "symfony/browser-kit": "^6.4 || ^7.1",
+                "symfony/console": "^6.4 || ^7.1",
+                "symfony/filesystem": "^6.4 || ^7.1",
+                "symfony/intl": "^6.4 || ^7.1",
+                "symfony/mailer": "^6.4 || ^7.1",
+                "symfony/mime": "^6.4 || ^7.1",
+                "symfony/phpunit-bridge": "^6.4 || ^7.1",
+                "vimeo/psalm": "^5.0 || ^6.10"
             },
             "suggest": {
                 "sonata-project/admin-bundle": "For admin dashboard to manage users and other entities",
@@ -5648,7 +5649,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sonata-project/SonataUserBundle/issues",
-                "source": "https://github.com/sonata-project/SonataUserBundle/tree/5.14.0"
+                "source": "https://github.com/sonata-project/SonataUserBundle/tree/5.15.0"
             },
             "funding": [
                 {
@@ -5668,7 +5669,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-10-18T08:14:07+00:00"
+            "time": "2025-05-16T19:45:55+00:00"
         },
         {
             "name": "stof/doctrine-extensions-bundle",
@@ -11867,16 +11868,16 @@
     "packages-dev": [
         {
             "name": "phpstan/phpstan",
-            "version": "2.1.15",
+            "version": "2.1.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "402d11c1aa40ae2e1c3a512e6a4edb957527b20b"
+                "reference": "b8c1cf533cba0c305d91c6ccd23f3dd0566ba5f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/402d11c1aa40ae2e1c3a512e6a4edb957527b20b",
-                "reference": "402d11c1aa40ae2e1c3a512e6a4edb957527b20b",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/b8c1cf533cba0c305d91c6ccd23f3dd0566ba5f9",
+                "reference": "b8c1cf533cba0c305d91c6ccd23f3dd0566ba5f9",
                 "shasum": ""
             },
             "require": {
@@ -11921,7 +11922,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-14T11:16:08+00:00"
+            "time": "2025-05-16T09:40:10+00:00"
         },
         {
             "name": "phpstan/phpstan-doctrine",
