@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1dcd94dcbb044809c2d3b19889ced31",
+    "content-hash": "5373880c5b4d5702e7e245911c574365",
     "packages": [
         {
             "name": "a2lix/auto-form-bundle",
@@ -4244,12 +4244,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/projet-normandie/user-bundle.git",
-                "reference": "adb0189772bcb489450bca115e66a5da31b07b2d"
+                "reference": "4bdbbf42fe6f6e0d39972ca54b9d36d8ef52e21a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/projet-normandie/user-bundle/zipball/adb0189772bcb489450bca115e66a5da31b07b2d",
-                "reference": "adb0189772bcb489450bca115e66a5da31b07b2d",
+                "url": "https://api.github.com/repos/projet-normandie/user-bundle/zipball/4bdbbf42fe6f6e0d39972ca54b9d36d8ef52e21a",
+                "reference": "4bdbbf42fe6f6e0d39972ca54b9d36d8ef52e21a",
                 "shasum": ""
             },
             "require": {
@@ -4314,7 +4314,7 @@
                 "issues": "https://github.com/projet-normandie/user-bundle/issues",
                 "source": "https://github.com/projet-normandie/user-bundle/tree/main"
             },
-            "time": "2025-05-17T17:12:19+00:00"
+            "time": "2025-05-20T20:45:27+00:00"
         },
         {
             "name": "psr/cache",
@@ -10101,16 +10101,16 @@
         },
         {
             "name": "symfony/stimulus-bundle",
-            "version": "v2.24.0",
+            "version": "v2.25.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stimulus-bundle.git",
-                "reference": "e09840304467cda3324cc116c7f4ee23c8ff227c"
+                "reference": "5a6aef0646119530da862d5afa1386ade3b9ed43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/stimulus-bundle/zipball/e09840304467cda3324cc116c7f4ee23c8ff227c",
-                "reference": "e09840304467cda3324cc116c7f4ee23c8ff227c",
+                "url": "https://api.github.com/repos/symfony/stimulus-bundle/zipball/5a6aef0646119530da862d5afa1386ade3b9ed43",
+                "reference": "5a6aef0646119530da862d5afa1386ade3b9ed43",
                 "shasum": ""
             },
             "require": {
@@ -10150,7 +10150,7 @@
                 "symfony-ux"
             ],
             "support": {
-                "source": "https://github.com/symfony/stimulus-bundle/tree/v2.24.0"
+                "source": "https://github.com/symfony/stimulus-bundle/tree/v2.25.2"
             },
             "funding": [
                 {
@@ -10166,7 +10166,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-03-09T21:10:04+00:00"
+            "time": "2025-05-19T11:54:27+00:00"
         },
         {
             "name": "symfony/stopwatch",
@@ -12164,7 +12164,8 @@
     "platform": {
         "php": ">=8.2",
         "ext-ctype": "*",
-        "ext-iconv": "*"
+        "ext-iconv": "*",
+        "ext-intl": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
