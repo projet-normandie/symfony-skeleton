@@ -11,7 +11,7 @@ sonata_admin:
         role_super_admin: ROLE_SUPER_ADMIN
     persist_filters: true
     templates:
-        layout: '@SonataTranslation/standard_layout.html.twig'
+        layout: 'admin/layout.html.twig'
 
 sonata_block:
     blocks:
