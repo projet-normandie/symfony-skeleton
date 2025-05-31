@@ -2,6 +2,25 @@ api_platform:
     title: Hello API Platform
     version: 1.0.0
     use_symfony_listeners: true
+    # Enable GraphQL
+    graphql:
+        enabled: true
+        graphiql:
+            enabled: true  # GraphiQL interface for development
+        graphql_playground:
+            enabled: true  # GraphQL Playground for development
+
+        # Cursor-based pagination (Relay style)
+        default_ide: 'graphiql'
+
+        # Enable introspection (needed for codegen)
+        introspection: true
+
+        # Maximum query depth to prevent abuse
+        #query_depth_limit: 15
+
+        # Maximum query complexity
+        #query_complexity_limit: 1000
     formats:
         jsonld: [ 'application/ld+json' ]
         json: [ 'application/json' ]
