@@ -1,3 +1,0 @@
-projet_normandie_user:
-  register:
-    uri_confirmation: '%env(resolve:APP_FRONT_URL)%/en/register?token=%s'
