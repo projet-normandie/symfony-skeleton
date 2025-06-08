@@ -5,6 +5,12 @@ security:
         app_user_provider:
             id: ProjetNormandie\UserBundle\Security\UserProvider
     firewalls:
+        audit:
+            lazy: true
+            pattern: /audit(.*)
+            provider: app_user_provider
+            context: user
+
         admin:
             lazy: true
             pattern: /admin(.*)
@@ -41,11 +47,12 @@ security:
 
     access_control:
         - { path: ^/api/(login|token/refresh), roles: PUBLIC_ACCESS }
-        - { path: ^/admin/login, role: PUBLIC_ACCESS }
-        - { path: ^/admin/logout, role: PUBLIC_ACCESS }
-        - { path: ^/admin/, role: [ ROLE_ADMIN, ROLE_SONATA_ADMIN ] }
-        - { path: ^/audit/, role: [ ROLE_ADMIN, ROLE_SONATA_ADMIN ] }
-        - { path: ^/admin/messenger, role: [ ROLE_MESSENGER_MONITOR ] }
+        - { path: ^/admin/login, roles: PUBLIC_ACCESS }
+        - { path: ^/admin/logout, roles: PUBLIC_ACCESS }
+        - { path: ^/admin/, roles: [ ROLE_ADMIN, ROLE_SONATA_ADMIN ] }
+        - { path: ^/audit/, roles: [ ROLE_ADMIN, ROLE_SONATA_ADMIN ] }
+        - { path: ^/admin/messenger, roles: [ ROLE_MESSENGER_MONITOR ] }
+        - { path: ^/health, roles: [ROLE_ADMIN] }
 
 
     role_hierarchy:
