@@ -21,4 +21,19 @@ services:
             - '../src/Kernel.php'
 
     # add more service definitions when explicit configuration is needed
-    # please note that last definitions always *replace* previous ones
+    # please note that last definitions always *replace* previous one
+    # Rate limiter factory services
+    App\EventSubscriber\RateLimitSubscriber:
+        arguments:
+            $apiLimiter: '@limiter.api'
+            $adminLimiter: '@limiter.admin'
+            $globalLimiter: '@limiter.global'
+            $apiBurstLimiter: '@limiter.api_burst'
+            $apiAnonymousLimiter: '@limiter.api_anonymous'
+            $security: '@security.helper'
+
+    App\EventSubscriber\LoginRateLimiterSubscriber:
+        arguments:
+            $loginLimiter: '@limiter.login'
+
+
