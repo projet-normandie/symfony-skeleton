@@ -105,7 +105,7 @@ fix: ## Fix code style issues
 ##@ Development
 serve: ## Start development server
 	@echo "$(GREEN)Starting development server at http://127.0.0.1:8000$(RESET)"
-	$(CONSOLE_BIN) server:run
+	symfony server:start
 
 clear: ## Clear all caches
 	@echo "$(YELLOW)Clearing caches...$(RESET)"
