@@ -1,6 +1,6 @@
 # Makefile to automate Symfony project testing and development
 
-.PHONY: help test test-unit test-integration test-functional test-coverage test-dox install setup db-setup db-reset lint fix serve clear cache
+.PHONY: help test test-unit test-integration test-functional test-coverage test-dox test-user test-user-api test-user-unit test-user-integration install setup db-setup db-reset lint fix serve clear cache
 
 # Default configuration
 PHP_BIN := php
@@ -40,7 +40,7 @@ db-test: ## Create test database with fixtures
 	$(CONSOLE_BIN) doctrine:database:drop --force --env=test --if-exists
 	$(CONSOLE_BIN) doctrine:database:create --env=test
 	$(CONSOLE_BIN) doctrine:schema:update --force --env=test
-	$(CONSOLE_BIN) doctrine:fixtures:load --no-interaction --env=test;
+	$(CONSOLE_BIN) doctrine:fixtures:load --no-interaction --env=test
 	@echo "$(GREEN)Test database ready with fixtures!$(RESET)"
 
 db-setup: db-test ## Alias for db-test (backward compatibility)
@@ -85,22 +85,45 @@ test-specific: ## Run specific test file (usage: make test-specific FILE=tests/U
 	@echo "$(GREEN)Running specific test: $(FILE)$(RESET)"
 	$(PHPUNIT_BIN) $(FILE)
 
+test-user: ## Run all User BoundedContext tests
+	@echo "$(GREEN)Running User BoundedContext tests...$(RESET)"
+	$(PHPUNIT_BIN) tests/BoundedContext/User/ --testdox
+
+test-user-api: ## Run User API tests only
+	@echo "$(GREEN)Running User API tests...$(RESET)"
+	@echo "$(YELLOW)Clearing rate limiter cache...$(RESET)"
+	$(CONSOLE_BIN) cache:pool:clear cache.rate_limiter --env=test
+	$(PHPUNIT_BIN) tests/BoundedContext/User/Functional/Api/ --testdox
+
+test-user-unit: ## Run User unit tests only
+	@echo "$(GREEN)Running User unit tests...$(RESET)"
+	$(PHPUNIT_BIN) tests/BoundedContext/User/Unit/ --testdox --exclude-group integration
+
+test-user-integration: ## Run User integration tests only
+	@echo "$(GREEN)Running User integration tests...$(RESET)"
+	$(PHPUNIT_BIN) tests/BoundedContext/User/Integration/ --testdox
+
 ##@ Code Quality
-lint: ## Run code linting (PHPStan + PHP_CodeSniffer)
-	@echo "$(GREEN)Running code linting...$(RESET)"
-	$(COMPOSER_BIN) lint
+phpstan: ## Run PHPStan static analysis
+	@echo "$(GREEN)Running PHPStan analysis...$(RESET)"
+	$(PHP_BIN) vendor/bin/phpstan analyse --memory-limit=1G
 
-lint-phpstan: ## Run PHPStan analysis
-	@echo "$(GREEN)Running PHPStan...$(RESET)"
-	$(PHP_BIN) vendor/bin/phpstan
-
-lint-phpcs: ## Run PHP_CodeSniffer
+phpcs: ## Run PHP_CodeSniffer code style check
 	@echo "$(GREEN)Running PHP_CodeSniffer...$(RESET)"
-	$(PHP_BIN) vendor/bin/phpcs src/ tests/ -p
+	$(PHP_BIN) vendor/bin/phpcs
 
-fix: ## Fix code style issues
-	@echo "$(GREEN)Fixing code style...$(RESET)"
-	$(COMPOSER_BIN) lint:phpcs:fix
+phpcs-fix: ## Fix code style issues with PHP_CodeSniffer
+	@echo "$(GREEN)Fixing code style with PHPCBF...$(RESET)"
+	$(PHP_BIN) vendor/bin/phpcbf
+
+lint: phpstan phpcs ## Run all code quality checks (PHPStan + PHPCS)
+	@echo "$(GREEN)All code quality checks completed!$(RESET)"
+
+fix: phpcs-fix ## Alias for phpcs-fix
+
+# Legacy compatibility
+lint-phpstan: phpstan ## Legacy alias for phpstan
+lint-phpcs: phpcs ## Legacy alias for phpcs
 
 ##@ Development
 serve: ## Start development server
@@ -170,6 +193,8 @@ tu: test-unit ## Shortcut for test-unit
 ti: test-integration ## Shortcut for test-integration
 tf: test-functional ## Shortcut for test-functional
 tc: test-coverage ## Shortcut for test-coverage
+tu-user: test-user ## Shortcut for test-user
+tu-api: test-user-api ## Shortcut for test-user-api
 l: lint ## Shortcut for lint
 f: fix ## Shortcut for fix
 s: serve ## Shortcut for serve

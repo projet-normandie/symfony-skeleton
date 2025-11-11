@@ -3,7 +3,7 @@ security:
         Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
     providers:
         app_user_provider:
-            id: ProjetNormandie\UserBundle\Security\UserProvider
+            id: App\BoundedContext\User\Infrastructure\Security\UserProvider
     firewalls:
         audit:
             lazy: true

@@ -10,7 +10,7 @@ dh_auditor:
                 - createdAt
                 - updatedAt
             entities:
-                ProjetNormandie\UserBundle\Entity\User:
+                App\BoundedContext\User\Domain\Entity\User:
                     ignored_columns:
                         - password
                         - lastLogin

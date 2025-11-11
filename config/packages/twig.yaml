@@ -1,5 +1,8 @@
 twig:
     file_name_pattern: '*.twig'
+    paths:
+        '%kernel.project_dir%/src/SharedKernel/Resources/views': 'SharedKernel'
+        '%kernel.project_dir%/src/BoundedContext/User/Resources/views': 'User'
 
 when@test:
     twig:

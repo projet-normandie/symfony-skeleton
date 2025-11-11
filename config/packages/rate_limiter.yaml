@@ -42,10 +42,10 @@ when@prod:
   framework:
     rate_limiter:
       api:
-        storage_id: 'cache.rate_limiter'
+        storage_service: 'cache.rate_limiter'
       login:
-        storage_id: 'cache.rate_limiter'
+        storage_service: 'cache.rate_limiter'
       admin:
-        storage_id: 'cache.rate_limiter'
+        storage_service: 'cache.rate_limiter'
       global:
-        storage_id: 'cache.rate_limiter'
+        storage_service: 'cache.rate_limiter'

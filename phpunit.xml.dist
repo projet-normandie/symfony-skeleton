@@ -24,10 +24,14 @@
             <directory>tests/Unit</directory>
         </testsuite>
         <testsuite name="Integration">
-            <directory>tests/Integration</directory>
+            <directory>tests/Infrastructure</directory>
         </testsuite>
         <testsuite name="Functional">
-            <directory>tests/Functional</directory>
+            <directory>tests/Presentation</directory>
+            <directory>tests/BoundedContext</directory>
+        </testsuite>
+        <testsuite name="Shared">
+            <directory>tests/Shared</directory>
         </testsuite>
     </testsuites>
 

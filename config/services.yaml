@@ -1,6 +1,11 @@
 # This file is the entry point to configure your own services.
 # Files in the packages/ subdirectory configure your dependencies.
 
+imports:
+    - { resource: services/shared.yaml }
+    - { resource: services/user.yaml }
+    - { resource: admin.yml }
+
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
@@ -17,13 +22,16 @@ services:
         resource: '../src/'
         exclude:
             - '../src/DependencyInjection/'
-            - '../src/Entity/'
+            - '../src/BoundedContext/*/Domain/Entity/'
+            - '../src/BoundedContext/*/Domain/ValueObject/'
+            - '../src/SharedKernel/Domain/Entity/'
+            - '../src/SharedKernel/Domain/ValueObject/'
             - '../src/Kernel.php'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous one
     # Rate limiter factory services
-    App\EventSubscriber\RateLimitSubscriber:
+    App\Shared\EventSubscriber\RateLimitSubscriber:
         arguments:
             $apiLimiter: '@limiter.api'
             $adminLimiter: '@limiter.admin'
@@ -32,7 +40,7 @@ services:
             $apiAnonymousLimiter: '@limiter.api_anonymous'
             $security: '@security.helper'
 
-    App\EventSubscriber\LoginRateLimiterSubscriber:
+    App\Shared\EventSubscriber\LoginRateLimiterSubscriber:
         arguments:
             $loginLimiter: '@limiter.login'
 
