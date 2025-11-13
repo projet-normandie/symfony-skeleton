@@ -14,6 +14,7 @@ class Group
     #[ORM\Column(length: 100, unique: true, nullable: false)]
     protected string $name = '';
 
+    /** @var string[] */
     #[ORM\Column(type: 'array')]
     protected array $roles = [];
 
@@ -22,7 +23,10 @@ class Group
         return sprintf('%s [%d]', $this->getName(), $this->getId());
     }
 
-    public function __construct($name, array $roles = [])
+    /**
+     * @param string[] $roles
+     */
+    public function __construct(string $name, array $roles = [])
     {
         $this->name = $name;
         $this->roles = $roles;
@@ -38,17 +42,20 @@ class Group
         return $this->name;
     }
 
-    public function hasRole($role): bool
+    public function hasRole(string $role): bool
     {
         return in_array(strtoupper($role), $this->roles, true);
     }
 
+    /**
+     * @return string[]
+     */
     public function getRoles(): array
     {
         return $this->roles;
     }
 
-    public function removeRole($role): self
+    public function removeRole(string $role): self
     {
         if (false !== $key = array_search(strtoupper($role), $this->roles, true)) {
             unset($this->roles[$key]);
@@ -58,13 +65,16 @@ class Group
         return $this;
     }
 
-    public function setName($name): self
+    public function setName(string $name): self
     {
         $this->name = $name;
 
         return $this;
     }
 
+    /**
+     * @param string[] $roles
+     */
     public function setRoles(array $roles): self
     {
         $this->roles = $roles;

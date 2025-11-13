@@ -6,6 +6,9 @@ use App\BoundedContext\User\Domain\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
+/**
+ * @extends ServiceEntityRepository<User>
+ */
 class UserRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
@@ -14,10 +17,9 @@ class UserRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param $q
-     * @return mixed
+     * @return User[]
      */
-    public function autocomplete($q): mixed
+    public function autocomplete(string $q): array
     {
         $query = $this->createQueryBuilder('u');
 
@@ -30,18 +32,14 @@ class UserRepository extends ServiceEntityRepository
         return $query->getQuery()->getResult();
     }
 
-    /**
-     * @param $object
-     * @return void
-     */
-    public function save($object): void
+    public function save(User $object): void
     {
-        $this->_em->persist($object);
-        $this->_em->flush();
+        $this->getEntityManager()->persist($object);
+        $this->getEntityManager()->flush();
     }
 
     public function flush(): void
     {
-        $this->_em->flush();
+        $this->getEntityManager()->flush();
     }
 }

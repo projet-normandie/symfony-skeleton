@@ -8,7 +8,6 @@ use Doctrine\ORM\EntityManagerInterface;
 use Gesdinet\JWTRefreshTokenBundle\Model\RefreshTokenManagerInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use Symfony\Contracts\Translation\TranslatorInterface;
@@ -20,7 +19,6 @@ class PasswordChangeSubscriber implements EventSubscriberInterface
         private readonly MailerInterface $mailer,
         private readonly EntityManagerInterface $entityManager,
         private readonly TranslatorInterface $translator,
-        private readonly RequestStack $requestStack,
         private readonly RefreshTokenManagerInterface $refreshTokenManager,
     ) {
     }

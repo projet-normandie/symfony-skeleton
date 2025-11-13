@@ -24,6 +24,7 @@ class SecurityEvent
     #[ORM\Column(type: 'datetime')]
     private \DateTime $createdAt;
 
+    /** @var array<string, mixed>|null */
     #[ORM\Column(type: 'json', nullable: true)]
     private ?array $eventData = null;
 
@@ -86,11 +87,17 @@ class SecurityEvent
         $this->createdAt = $createdAt;
     }
 
+    /**
+     * @return array<string, mixed>|null
+     */
     public function getEventData(): ?array
     {
         return $this->eventData;
     }
 
+    /**
+     * @param array<string, mixed>|null $eventData
+     */
     public function setEventData(?array $eventData): void
     {
         $this->eventData = $eventData;

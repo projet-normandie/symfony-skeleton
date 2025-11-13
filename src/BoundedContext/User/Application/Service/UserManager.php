@@ -82,11 +82,17 @@ class UserManager
         return $this->findUserBy(['confirmationToken' => $token]);
     }
 
-    private function findUserBy(array $criteria): mixed
+    /**
+     * @param array<string, mixed> $criteria
+     */
+    private function findUserBy(array $criteria): ?User
     {
         return $this->getRepository()->findOneBy($criteria);
     }
 
+    /**
+     * @return ObjectRepository<User>
+     */
     protected function getRepository(): ObjectRepository
     {
         return $this->em->getRepository(User::class);

@@ -3,15 +3,16 @@
 namespace App\BoundedContext\User\Domain\Event;
 
 use App\BoundedContext\User\Domain\Entity\User;
-use Symfony\Contracts\EventDispatcher\Event;
+use App\SharedKernel\Domain\Event\DomainEvent;
 
-class EmailChangedEvent extends Event
+class EmailChangedEvent extends DomainEvent
 {
     public function __construct(
         private readonly User $user,
         private readonly string $oldEmail,
         private readonly string $newEmail
     ) {
+        parent::__construct();
     }
 
     public function getUser(): User

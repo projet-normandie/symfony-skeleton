@@ -18,6 +18,7 @@ use Sonata\AdminBundle\Form\Type\ModelAutocompleteType;
 
 /**
  * Admin class for the SecurityEvent entity
+ * @extends AbstractAdmin<SecurityEvent>
  */
 class SecurityEventAdmin extends AbstractAdmin
 {
@@ -77,7 +78,10 @@ class SecurityEventAdmin extends AbstractAdmin
     /**
      * Configure actions for the list view
      */
-    protected function configureActionButtons(array $buttonList, $action, $object = null): array
+    /**
+     * @param array<string, mixed> $buttonList
+     */
+    protected function configureActionButtons(array $buttonList, string $action, ?object $object = null): array
     {
         if ($action === 'list') {
             $buttonList['statistics'] = [

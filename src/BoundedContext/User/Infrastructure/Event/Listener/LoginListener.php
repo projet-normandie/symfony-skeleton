@@ -18,6 +18,9 @@ class LoginListener implements EventSubscriberInterface
     ) {
     }
 
+    /**
+     * @return array<string, string>
+     */
     public static function getSubscribedEvents(): array
     {
         return [
@@ -29,10 +32,6 @@ class LoginListener implements EventSubscriberInterface
     {
         /** @var User $user */
         $user = $event->getUser();
-
-        if (!$user instanceof User) {
-            return;
-        }
 
         // Mettre à jour lastLogin avec la date/heure actuelle
         $user->setLastLogin(new \DateTime());

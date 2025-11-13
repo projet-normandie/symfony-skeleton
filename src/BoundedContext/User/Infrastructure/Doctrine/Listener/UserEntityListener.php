@@ -9,7 +9,6 @@ use App\SharedKernel\Domain\Security\SecurityEventTypeEnum;
 use App\BoundedContext\User\Domain\Entity\User;
 use App\BoundedContext\User\Domain\Event\EmailChangedEvent;
 use App\BoundedContext\User\Domain\Event\PasswordChangedEvent;
-use App\SharedKernel\Infrastructure\TokenGenerator;
 use Doctrine\ORM\Event\PostPersistEventArgs;
 use Doctrine\ORM\Event\PostUpdateEventArgs;
 use Doctrine\ORM\Event\PrePersistEventArgs;
@@ -20,12 +19,13 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class UserEntityListener
 {
+    /** @var array<int, array{oldEmail: string, newEmail: string}> */
     private array $emailChangeData = [];
+    /** @var array<int, bool> */
     private array $passwordChangeData = [];
 
     public function __construct(
         private readonly UserPasswordHasherInterface $passwordHasher,
-        private readonly TokenGenerator $tokenGenerator,
         private readonly EventDispatcherInterface $eventDispatcher,
         private readonly SecurityHistoryManager $securityHistoryManager
     ) {

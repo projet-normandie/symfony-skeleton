@@ -8,6 +8,9 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\Exception\UserNotFoundException;
 
+/**
+ * @implements UserProviderInterface<User>
+ */
 final class UserProvider implements UserProviderInterface
 {
     private EntityManagerInterface $entityManager;
@@ -33,7 +36,7 @@ final class UserProvider implements UserProviderInterface
         return $user;
     }
 
-    public function findUserByUsernameOrEmail($usernameOrEmail): ?User
+    public function findUserByUsernameOrEmail(string $usernameOrEmail): ?User
     {
         if (preg_match('/^.+\@\S+\.\S+$/', $usernameOrEmail)) {
             $user = $this->findOneUserBy(['email' => $usernameOrEmail]);
@@ -45,6 +48,9 @@ final class UserProvider implements UserProviderInterface
         return $this->findOneUserBy(['username' => $usernameOrEmail]);
     }
 
+    /**
+     * @param array<string, mixed> $options
+     */
     private function findOneUserBy(array $options): ?User
     {
         return $this->entityManager

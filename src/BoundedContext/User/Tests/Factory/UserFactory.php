@@ -87,6 +87,7 @@ final class UserFactory extends PersistentProxyObjectFactory
 
     /**
      * Create a user with custom roles
+     * @param string[] $roles
      */
     public function withRoles(array $roles): static
     {

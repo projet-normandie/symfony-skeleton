@@ -21,6 +21,8 @@ class SecurityHistoryManager
 
     /**
      * Record a security event for a user
+     *
+     * @param array<string, mixed> $data
      */
     public function recordEvent(User $user, SecurityEventTypeEnum $eventType, array $data = []): SecurityEvent
     {
@@ -47,6 +49,8 @@ class SecurityHistoryManager
 
     /**
      * Get recent security events for a user
+     *
+     * @return SecurityEvent[]
      */
     public function getRecentEvents(User $user, int $limit = 10): array
     {
@@ -62,6 +66,8 @@ class SecurityHistoryManager
 
     /**
      * Get events of a specific type for a user
+     *
+     * @return SecurityEvent[]
      */
     public function getEventsByType(User $user, string $eventType, int $limit = 10): array
     {

@@ -156,6 +156,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Gedmo\Slug(fields: ['username'])]
     protected string $slug;
 
+    /** @var Collection<int, Group> */
     #[ORM\JoinTable(name: 'pnu_user_group')]
     #[ORM\JoinColumn(name: 'user_id', referencedColumnName: 'id')]
     #[ORM\InverseJoinColumn(name: 'group_id', referencedColumnName: 'id')]
@@ -182,7 +183,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->username;
     }
 
-    public function setUsername($username): void
+    public function setUsername(string $username): void
     {
         $this->username = $username;
     }
@@ -197,7 +198,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->email = $email;
     }
 
-    public function setEnabled($boolean): void
+    public function setEnabled(bool $boolean): void
     {
         $this->enabled = (bool) $boolean;
     }
@@ -221,6 +222,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return array_values(array_unique($roles));
     }
 
+    /**
+     * @param string[] $roles
+     */
     public function setRoles(array $roles): void
     {
         $this->roles = $roles;
@@ -250,7 +254,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->plainPassword;
     }
 
-    public function hasRole($role): bool
+    public function hasRole(string $role): bool
     {
         return in_array(strtoupper($role), $this->getRoles(), true);
     }
@@ -290,7 +294,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->lastLogin = $time;
     }
 
-    public function setConfirmationToken($confirmationToken): void
+    public function setConfirmationToken(?string $confirmationToken): void
     {
         $this->confirmationToken = $confirmationToken;
     }
@@ -310,7 +314,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->passwordRequestedAt;
     }
 
-    public function isPasswordRequestExpired($ttl): bool
+    public function isPasswordRequestExpired(int $ttl): bool
     {
         return $this->getPasswordRequestedAt() instanceof DateTime &&
                $this->getPasswordRequestedAt()->getTimestamp() + $ttl < time();
@@ -362,22 +366,28 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->comment = $comment;
     }
 
-    public function setGroups($groups): void
+    /**
+     * @param Collection<int, Group> $groups
+     */
+    public function setGroups(Collection $groups): void
     {
         $this->groups = $groups;
     }
 
+    /**
+     * @return Collection<int, Group>
+     */
     public function getGroups(): Collection
     {
         return $this->groups;
     }
 
-    public function setPlainPassword($password): void
+    public function setPlainPassword(?string $password): void
     {
         $this->plainPassword = $password;
     }
 
-    public function addGroup($group): void
+    public function addGroup(Group $group): void
     {
         $this->groups[] = $group;
     }
@@ -392,7 +402,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return sprintf('%s [%d]', $this->getUsername(), $this->getId());
     }
 
-    public function addRole($role): void
+    public function addRole(string $role): void
     {
         $role = strtoupper($role);
         if (!in_array($role, $this->roles, true)) {
@@ -400,7 +410,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         }
     }
 
-    public function removeRole($role): void
+    public function removeRole(string $role): void
     {
         if (false !== $key = array_search(strtoupper($role), $this->roles, true)) {
             unset($this->roles[$key]);

@@ -10,6 +10,9 @@ use Sonata\AdminBundle\Admin\AdminInterface;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Route\RouteCollectionInterface;
 
+/**
+ * @extends AbstractAdminExtension<SecurityEvent>
+ */
 class SecurityEventStatisticsExtension extends AbstractAdminExtension
 {
     public function __construct(
@@ -24,7 +27,11 @@ class SecurityEventStatisticsExtension extends AbstractAdminExtension
         ]);
     }
 
-    public function configureActionButtons(AdminInterface $admin, $list, $action, $object = null): array
+    /**
+     * @param array<string, mixed> $list
+     * @return array<string, mixed>
+     */
+    public function configureActionButtons(AdminInterface $admin, array $list, string $action, ?object $object = null): array
     {
         $list['statistics'] = [
             'template' => '@PnUser/admin/statistics_button.html.twig'
@@ -33,6 +40,9 @@ class SecurityEventStatisticsExtension extends AbstractAdminExtension
         return $list;
     }
 
+    /**
+     * @return array<int, array{type: SecurityEventTypeEnum, count: int, label: string, icon: string, severity: string}>
+     */
     public function getSecurityStatistics(int $weeks = 4): array
     {
         $startDate = new \DateTime(sprintf('-%d weeks', $weeks));
@@ -93,6 +103,9 @@ class SecurityEventStatisticsExtension extends AbstractAdminExtension
         return $statistics;
     }
 
+    /**
+     * @return array<int, array{week: string, year: string, start_date: \DateTime, end_date: \DateTime, data: array<string, int>}>
+     */
     public function getWeeklyTrends(int $weeks = 4): array
     {
         $trends = [];

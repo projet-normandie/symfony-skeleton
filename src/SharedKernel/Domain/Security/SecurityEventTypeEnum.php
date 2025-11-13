@@ -155,6 +155,8 @@ enum SecurityEventTypeEnum: string implements SecurityEventTypeInterface
 
     /**
      * Get all available event types as options for forms
+     *
+     * @return array<string, string>
      */
     public static function getOptionsForForm(): array
     {
